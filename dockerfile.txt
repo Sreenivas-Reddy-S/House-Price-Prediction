@@ -1,0 +1,17 @@
+# Use the official Cassandra image as the base image
+FROM cassandra:latest
+
+# Expose Cassandra default ports (CQL, Thrift, and native transport)
+EXPOSE 9042 7000 7001
+
+# Optional: Provide a custom Cassandra configuration if needed
+# COPY cassandra-custom.yaml /etc/cassandra/
+
+# Optional: Add your own entrypoint script if necessary
+# COPY entrypoint.sh /usr/local/bin/
+
+# Set environment variables if needed (e.g., for JVM options)
+# ENV CASSANDRA_JVM_OPTIONS="-Xmx1g -Xms1g"
+
+# Start Cassandra when the container runs
+CMD ["cassandra", "-f"]
