@@ -27,7 +27,7 @@ from cassandra.cluster import Cluster
 cluster = Cluster(['0.0.0.0'], port=9042)
 session = cluster.connect("house")
  
-# Instead of using 0.0.0.0, you cans use public IP, so that your Google Colab etc.. are also able to connect to the cassandra database.
+- Instead of using 0.0.0.0, you cans use public IP, so that your Google Colab etc.. are also able to connect to the cassandra database.
 
 # It’s time for the Model:
 By taking the leverage of the total sqft, number of bedrooms and bath, one can classify the houses depending on their location, price and type of bed & bath. The classification techniques like linear regression, decision tree are appropriate for the dataset. The appropriate analysis from the dataset are to predict the price of the house and perform analysis on the two bed room vs three bed room in specific locations.  
